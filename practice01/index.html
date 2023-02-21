@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Learn React</title>
+  </head>
+  <body>
+    <div>
+        <div class="text-gray-600">
+            <header class="mb-5">
+                <div class="bg-gray-700 p-4 text-white">Learn React.js</div>
+            </header>
+            <main class="container mx-auto">
+                <div id="mainBody" class="text-center text-3x1 text-purple-800">
+                    Loading...
+                </div>
+                <div class="text-center my-4">
+                    <button class="bg-green-400 rounded shadow-md text-white font-bold py-2 px-3 rounded cursor-pointer" onClick="btn_onClick()">Click</button>
+                </div>
+            </main>
+            <footer class="mt-5">
+                <div class="bg-gray-300 p-4 text-black"> Goodbye, <span class="text-red-600">Angular</span> and <span class="text-green-600">Vue</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        let dom = document.getElementById("mainBody")
+        let el = React.createElement("p", {}, "React first try")
+        ReactDOM.render(el, dom)
+
+        let btn_onClick = () => {
+            let msg = 'Hello, React'
+            let el = React.createElement('p', {}, msg)
+            ReactDOM.render(el, dom)
+        }
+    </script>
+  </body>
+</html>
